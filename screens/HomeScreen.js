@@ -65,7 +65,6 @@ class connectedHomeScreen extends Component {
             >
               <Image
                 source={ require('../assets/images/kanyeIcon.png')}
-
               />
             </TouchableOpacity>
             <Text style={styles.quoteText} onPress={this.shareQuote}>{this.props.lastQuote}</Text>

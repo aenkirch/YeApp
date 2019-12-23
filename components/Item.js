@@ -14,7 +14,7 @@ class connectedItem extends Component {
 
     deleteQuote = (param) => {
         Alert.alert(
-            'Deleting a quote',
+            param,
             'Do you want to delete this quote from your favs list ?',
             [
                 {
