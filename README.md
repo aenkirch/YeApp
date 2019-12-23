@@ -15,7 +15,7 @@ YeApp
 
 This project was developed during a few months as a school project for ESIEA Gradute School of Engineering : therefore, we had to follow some guidelines.
 
-<img src="./logo-esiea.jpg" alt="Kanye logo" />
+<img src="./readmeSrc/logo-esiea.jpg" alt="Kanye logo" />
 
 ---
 
@@ -31,6 +31,16 @@ This project was developed during a few months as a school project for ESIEA Gra
 ## Technologies used
 
 React Native w/ Redux <br />
+
+---
+
+## Some screenshots
+
+<img src="./readmeSrc/screen1.jpg" />
+<img src="./readmeSrc/screen2.jpg" />
+<img src="./readmeSrc/screen3.jpg" />
+<img src="./readmeSrc/screen4.jpg" />
+<img src="./readmeSrc/screen5.jpg" />
 
 ---
 
