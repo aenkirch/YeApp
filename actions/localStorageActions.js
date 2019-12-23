@@ -38,3 +38,26 @@ export function addQuoteToFavs(payload) {
         }
     }
 };
+
+export function removeQuoteFromFavs(payload) {
+    return async function(dispatch) {
+        console.log(payload);
+        try {
+            let storedArray = await AsyncStorage.getItem('yeSavedQuotes');
+            let index = null;
+            storedArray = JSON.parse(storedArray);
+            storedArray.forEach(element => {
+                if (element.title === payload)
+                    index = storedArray.indexOf(element);
+            });
+            storedArray.splice(index, 1);
+            AsyncStorage.setItem('yeSavedQuotes', JSON.stringify(storedArray));
+
+            let value = await AsyncStorage.getItem('yeSavedQuotes');
+            dispatch ({ type: FAV_QUOTES_LOADED, payload: JSON.parse(value) });
+        
+        } catch (error) {
+            console.log(error);
+        }
+    }
+};
