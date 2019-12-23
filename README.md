@@ -3,7 +3,7 @@ YeApp
 </h1>
 
 <p align="center">
-    This is an hybrid app developed in React Native you can use to manage your university lectures as a teacher, create a real interaction between you and your students.
+    This is an hybrid app developed in React Native you can use to get Kanye West‘s best quotes, share them on your phone, share them with your friends, etc...
 </p>
 
 <p align="center">
