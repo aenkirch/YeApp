@@ -36,11 +36,11 @@ React Native w/ Redux <br />
 
 ## Some screenshots
 
-<img src="./readmeSrc/screen1.jpg" />
-<img src="./readmeSrc/screen2.jpg" />
-<img src="./readmeSrc/screen3.jpg" />
-<img src="./readmeSrc/screen4.jpg" />
-<img src="./readmeSrc/screen5.jpg" />
+<img src="./readmeSrc/screen1.jpg" style="width: 30%; height: auto;"/>
+<img src="./readmeSrc/screen2.jpg" style="width: 30%; height: auto;"/>
+<img src="./readmeSrc/screen3.jpg" style="width: 30%; height: auto;"/>
+<img src="./readmeSrc/screen4.jpg" style="width: 30%; height: auto;"/>
+<img src="./readmeSrc/screen5.jpg" style="width: 30%; height: auto;"/>
 
 ---
 
