@@ -30,12 +30,14 @@ class connectedHomeScreen extends Component {
   addQuoteToFavs = () => {
     let canBeMade = true;
 
-    this.props.favouriteQuotes.forEach(element => {
-      if (element.title === this.props.lastQuote){
-        canBeMade = false;
-        return ToastAndroid.show('This quote is already in your favs quotes list', ToastAndroid.SHORT);
-      }
-    });
+    if (this.props.favouriteQuotes){
+      this.props.favouriteQuotes.forEach(element => {
+        if (element.title === this.props.lastQuote){
+          canBeMade = false;
+          return ToastAndroid.show('This quote is already in your favs quotes list', ToastAndroid.SHORT);
+        }
+      });
+    }
     
     if (this.props.lastQuote === WELCOME_SENTENCE) {
       canBeMade = false;

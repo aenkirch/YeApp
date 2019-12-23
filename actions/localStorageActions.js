@@ -20,6 +20,9 @@ export function addQuoteToFavs(payload) {
             let storedArray = await AsyncStorage.getItem('yeSavedQuotes');
             storedArray = JSON.parse(storedArray);
 
+            if (typeof payload === 'number')
+                payload = payload.toString();
+
             if ( !Array.isArray(storedArray) ){
                 storedArray = [ { title: payload, id: payload } ];
                 await AsyncStorage.setItem('yeSavedQuotes', JSON.stringify(storedArray));
