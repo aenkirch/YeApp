@@ -36,11 +36,7 @@ React Native w/ Redux <br />
 
 ## Some screenshots
 
-<img src="./readmeSrc/screen1.jpg" style="max-width: 200px; height: auto;"/>
-<img src="./readmeSrc/screen2.jpg" style="max-width: 200px; height: auto;"/>
-<img src="./readmeSrc/screen3.jpg" style="max-width: 200px; height: auto;"/>
-<img src="./readmeSrc/screen4.jpg" style="max-width: 200px; height: auto;"/>
-<img src="./readmeSrc/screen5.jpg" style="max-width: 200px; height: auto;"/>
+Available <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/drive/folders/1LaOD-srupD2YKnw2FrvVQWoQZ6rHYQ94?usp=sharing" >here</a>
 
 ---
 
