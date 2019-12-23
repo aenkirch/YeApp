@@ -6,7 +6,8 @@ import {
   Text,
   TouchableOpacity,
   StyleSheet,
-  Share
+  Share,
+  ToastAndroid
 } from 'react-native';
 import { connect } from 'react-redux';
 
@@ -24,15 +25,25 @@ mapDispatchToProps = dispatch => {
 
 class connectedHomeScreen extends Component {
 
-  componentWillMount = async () => this.props.loadFavQuotes();
+  componentWillMount = () => this.props.loadFavQuotes();
 
-  addQuoteToFavs = async () => {
-    if (this.props.lastQuote != WELCOME_SENTENCE){
-      this.props.addQuoteToFavs(this.props.lastQuote);
+  addQuoteToFavs = () => {
+    let canBeMade = true;
+
+    this.props.favouriteQuotes.forEach(element => {
+      if (element.title === this.props.lastQuote){
+        canBeMade = false;
+        return ToastAndroid.show('This quote is already in your favs quotes list', ToastAndroid.SHORT);
+      }
+    });
+    
+    if (this.props.lastQuote === WELCOME_SENTENCE) {
+      canBeMade = false;
+      return ToastAndroid.show('Tap on Ye before trying to add a quote to your favs', ToastAndroid.SHORT);
     }
-
-    else
-      alert('Get a new quote before trying to save a quote !');
+    
+    if (canBeMade === true)
+      this.props.addQuoteToFavs(this.props.lastQuote);
   }
 
   shareQuote = () => {
@@ -43,7 +54,7 @@ class connectedHomeScreen extends Component {
     }
   }
 
-  render() { // mettre la ScrollView uniquement sur le texte
+  render() {
     return (
       <View>
         <ScrollView>
@@ -80,7 +91,8 @@ connectedHomeScreen.navigationOptions = {
 
 const mapStateToProps = state => {
   return { 
-    lastQuote: state.lastQuote
+    lastQuote: state.lastQuote,
+    favouriteQuotes: state.favouriteQuotes
   }
 };
 

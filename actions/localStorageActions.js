@@ -1,4 +1,4 @@
-import { AsyncStorage } from 'react-native';
+import { AsyncStorage, ToastAndroid } from 'react-native';
 import { QUOTE_ADDED_TO_FAVQUOTES, FAV_QUOTES_LOADED } from '../constants/Action-types';
 
 export function loadFavQuotes(payload) {
@@ -31,6 +31,8 @@ export function addQuoteToFavs(payload) {
                 console.log(storedArray);
                 AsyncStorage.setItem('yeSavedQuotes', JSON.stringify(storedArray));
             }
+
+            ToastAndroid.show('Successfully added this quote to your favs', ToastAndroid.SHORT);
             dispatch ({ type: QUOTE_ADDED_TO_FAVQUOTES, payload: storedArray })
         
         } catch (error) {
